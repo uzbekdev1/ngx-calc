@@ -1,7 +1,4 @@
-import {
-  Component,
-  OnInit,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { AppService } from './app.service';
 
@@ -33,5 +30,25 @@ export class AppComponent implements OnInit {
 
   changeValue(value: string) {
     this.service.setNumber(value);
+  }
+
+  onEquals(): void {
+    this.service.toCalculate();
+  }
+
+  onAdd(): void {
+    this.service.changeOperator('+');
+  }
+
+  onSubtract(): void {
+    this.service.changeOperator('-');
+  }
+
+  onMultiply(): void {
+    this.service.changeOperator('*');
+  }
+
+  onDivide(): void {
+    this.service.changeOperator('/');
   }
 }

@@ -2,7 +2,7 @@
   <div id="app">
     <div class="calculator">
       <div class="calculator-display">
-        <div class="auto-scaling-text">{{ result }}</div>
+        <div class="auto-scaling-text">{{result}}</div>
       </div>
       <div class="calculator-keypad">
         <div class="input-keys">
@@ -28,11 +28,11 @@
           </div>
         </div>
         <div class="operator-keys">
-          <button class="calculator-key key-divide">÷</button
-          ><button class="calculator-key key-multiply">×</button
-          ><button class="calculator-key key-subtract">−</button
-          ><button class="calculator-key key-add">+</button
-          ><button class="calculator-key key-equals">=</button>
+          <button class="calculator-key key-divide" (click)="onDivide()">÷</button
+          ><button class="calculator-key key-multiply" (click)="onMultiply()">×</button
+          ><button class="calculator-key key-subtract" (click)="onSubtract()">−</button
+          ><button class="calculator-key key-add" (click)="onAdd()">+</button
+          ><button class="calculator-key key-equals" (click)="onEquals()">=</button>
         </div>
       </div>
     </div>
