@@ -68,25 +68,25 @@ export class AppService {
       case '+':
         {
           const result = prevResult + currentResult;
-          this.currentResult = `${result.toFixed(2)}`;
+          this.currentResult = `${result}`;
         }
         break;
       case '-':
         {
           const result = prevResult - currentResult;
-          this.currentResult = `${result.toFixed(2)}`;
+          this.currentResult = `${result}`;
         }
         break;
       case '/':
         {
           const result = prevResult / currentResult;
-          this.currentResult = `${result.toFixed(2)}`;
+          this.currentResult = `${result}`;
         }
         break;
       case '*':
         {
           const result = prevResult * currentResult;
-          this.currentResult = `${result.toFixed(2)}`;
+          this.currentResult = `${result}`;
         }
         break;
       default:
