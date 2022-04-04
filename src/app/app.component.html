@@ -7,32 +7,30 @@
       <div class="calculator-keypad">
         <div class="input-keys">
           <div class="function-keys">
-            <button class="calculator-key key-clear" (click)="onReset()">
-              AC</button
-            ><button class="calculator-key key-sign" (click)="onAbsolute()">
-              ±</button
-            ><button class="calculator-key key-percent" (click)="onPercent()">%</button>
+            <button class="calculator-key key-clear" (click)="onReset()">AC</button>
+            <button class="calculator-key key-sign" (click)="onAbsolute()">±</button>
+            <button class="calculator-key key-percent" (click)="onPercent()">%</button>
           </div>
           <div class="digit-keys">
-            <button class="calculator-key key-0" (click)="changeValue('0')">0</button
-            ><button class="calculator-key key-dot" (click)="changeValue('.')">●</button
-            ><button class="calculator-key key-1" (click)="changeValue('1')">1</button
-            ><button class="calculator-key key-2" (click)="changeValue('2')">2</button
-            ><button class="calculator-key key-3" (click)="changeValue('3')">3</button
-            ><button class="calculator-key key-4" (click)="changeValue('4')">4</button
-            ><button class="calculator-key key-5" (click)="changeValue('5')">5</button
-            ><button class="calculator-key key-6" (click)="changeValue('6')">6</button
-            ><button class="calculator-key key-7" (click)="changeValue('7')">7</button
-            ><button class="calculator-key key-8" (click)="changeValue('8')">8</button
-            ><button class="calculator-key key-9" (click)="changeValue('9')">9</button>
+            <button class="calculator-key key-0" (click)="changeValue('0')">0</button>
+            <button class="calculator-key key-dot" (click)="onFloat()">●</button>
+            <button class="calculator-key key-1" (click)="changeValue('1')">1</button>
+            <button class="calculator-key key-2" (click)="changeValue('2')">2</button>
+            <button class="calculator-key key-3" (click)="changeValue('3')">3</button>
+            <button class="calculator-key key-4" (click)="changeValue('4')">4</button>
+            <button class="calculator-key key-5" (click)="changeValue('5')">5</button>
+            <button class="calculator-key key-6" (click)="changeValue('6')">6</button>
+            <button class="calculator-key key-7" (click)="changeValue('7')">7</button>
+            <button class="calculator-key key-8" (click)="changeValue('8')">8</button>
+            <button class="calculator-key key-9" (click)="changeValue('9')">9</button>
           </div>
         </div>
         <div class="operator-keys">
-          <button class="calculator-key key-divide" (click)="onDivide()">÷</button
-          ><button class="calculator-key key-multiply" (click)="onMultiply()">×</button
-          ><button class="calculator-key key-subtract" (click)="onSubtract()">−</button
-          ><button class="calculator-key key-add" (click)="onAdd()">+</button
-          ><button class="calculator-key key-equals" (click)="onEquals()">=</button>
+          <button class="calculator-key key-divide" (click)="onOperator('/')">÷</button>
+          <button class="calculator-key key-multiply" (click)="onOperator('*')">×</button>
+          <button class="calculator-key key-subtract" (click)="onOperator('-')">−</button>
+          <button class="calculator-key key-add" (click)="onOperator('+')">+</button>
+          <button class="calculator-key key-equals" (click)="onEquals()">=</button>
         </div>
       </div>
     </div>

@@ -28,27 +28,19 @@ export class AppComponent implements OnInit {
     this.service.toPercent();
   }
 
-  changeValue(value: string) {
+  changeValue(value: string): void {
     this.service.setNumber(value);
+  }
+
+  onFloat(): void {
+    this.service.changeFloat();
   }
 
   onEquals(): void {
     this.service.toCalculate();
   }
 
-  onAdd(): void {
-    this.service.changeOperator('+');
-  }
-
-  onSubtract(): void {
-    this.service.changeOperator('-');
-  }
-
-  onMultiply(): void {
-    this.service.changeOperator('*');
-  }
-
-  onDivide(): void {
-    this.service.changeOperator('/');
+  onOperator(symbol: string): void {
+    this.service.changeOperator(symbol);
   }
 }

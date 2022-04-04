@@ -43,6 +43,13 @@ export class AppService {
     }
   }
 
+  changeFloat(): void {
+    if (this.currentResult.indexOf('.') != -1) {
+      return;
+    }
+    this.currentResult = `${this.currentResult}.`;
+  }
+
   changeOperator(symbol: string): void {
     if (!this.symbol) {
       this.prevResult = this.currentResult;
@@ -61,25 +68,25 @@ export class AppService {
       case '+':
         {
           const result = prevResult + currentResult;
-          this.currentResult = `${result}`;
+          this.currentResult = `${result.toFixed(2)}`;
         }
         break;
       case '-':
         {
           const result = prevResult - currentResult;
-          this.currentResult = `${result}`;
+          this.currentResult = `${result.toFixed(2)}`;
         }
         break;
       case '/':
         {
           const result = prevResult / currentResult;
-          this.currentResult = `${result}`;
+          this.currentResult = `${result.toFixed(2)}`;
         }
         break;
       case '*':
         {
           const result = prevResult * currentResult;
-          this.currentResult = `${result}`;
+          this.currentResult = `${result.toFixed(2)}`;
         }
         break;
       default:
@@ -87,7 +94,7 @@ export class AppService {
     }
 
     this.prevResult = '';
-    this.symbol='';
+    this.symbol = '';
   }
 
   doReset(): void {
