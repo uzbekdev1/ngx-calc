@@ -1,0 +1,40 @@
+<div id="wrapper">
+  <div id="app">
+    <div class="calculator">
+      <div class="calculator-display">
+        <div class="auto-scaling-text">{{ result }}</div>
+      </div>
+      <div class="calculator-keypad">
+        <div class="input-keys">
+          <div class="function-keys">
+            <button class="calculator-key key-clear" (click)="onReset()">
+              AC</button
+            ><button class="calculator-key key-sign" (click)="onAbsolute()">
+              ±</button
+            ><button class="calculator-key key-percent" (click)="onPercent()">%</button>
+          </div>
+          <div class="digit-keys">
+            <button class="calculator-key key-0" (click)="changeValue('0')">0</button
+            ><button class="calculator-key key-dot" (click)="changeValue('.')">●</button
+            ><button class="calculator-key key-1" (click)="changeValue('1')">1</button
+            ><button class="calculator-key key-2" (click)="changeValue('2')">2</button
+            ><button class="calculator-key key-3" (click)="changeValue('3')">3</button
+            ><button class="calculator-key key-4" (click)="changeValue('4')">4</button
+            ><button class="calculator-key key-5" (click)="changeValue('5')">5</button
+            ><button class="calculator-key key-6" (click)="changeValue('6')">6</button
+            ><button class="calculator-key key-7" (click)="changeValue('7')">7</button
+            ><button class="calculator-key key-8" (click)="changeValue('8')">8</button
+            ><button class="calculator-key key-9" (click)="changeValue('9')">9</button>
+          </div>
+        </div>
+        <div class="operator-keys">
+          <button class="calculator-key key-divide">÷</button
+          ><button class="calculator-key key-multiply">×</button
+          ><button class="calculator-key key-subtract">−</button
+          ><button class="calculator-key key-add">+</button
+          ><button class="calculator-key key-equals">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
